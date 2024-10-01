@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <a href="../index.html" class="home">HOME</a>
+                <a href="../Logine/index.html" class="back">
+                    <div class="back-box">
+                        <span class="back-elem">
+                            <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="back-elem">
+                            <svg viewBox="0 0 46 40">
+                                <path
+                                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                                </path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <form class="signup-form" action="/submit-signup" method="POST">
+        <div class="container">
+            <p class="title">SIGN-UP</p>
+            <p class="p">To start your journey with us, please enter your personal information:</p>
+            
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" placeholder="First Name" name="first-name" required aria-required="true"><br><br>
+            
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" placeholder="Last Name" name="last-name" required aria-required="true"><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Email" name="email" required aria-required="true"><br><br>
+            
+            <label for="username-signup">User Name:</label>
+            <input type="text" id="username-signup" placeholder="Username" name="username" required aria-required="true"><br><br>
+            
+            <label for="password-signup">Password:</label>
+            <input type="password" id="password-signup" placeholder="Password" name="password" required aria-required="true"><br><br>
+            
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" name="confirm-password" required aria-required="true"><br><br>
+            
+            <button type="submit" class="create-account" id="create-account">Create Account</button> <!-- Specify type="submit" for button -->
+            <p class="p">or create an account with:</p>
+        </div>
+    </form>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+body{
+    background-image: url(backgound-img.jpg);
+    font-family: oswald ,Arial, Helvetica, sans-serif ;
+    color: beige;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  color: white;
+  font-family: 'Oswald',Arial, Helvetica,sans-serif;
+  border: #fff;
+  border-radius: 50px;
+  border-color: #fff;
+}
+.home{
+  color: beige;
+  text-decoration: none;
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: 900;
+  border: 6px inset rgba(253,38,38, 0.685);
+  border-radius: 34px;
+  background-color: transparent;
+}
+
+.home::before{
+  content: " ";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: rgba(253,38,38, 0.685);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+.home:hover{
+   color: #f34b4ba8;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(253, 38, 38, 0.685);
+}
+
+.back {
+  display: block;
+  position: fixed; /* Make it fixed in position */
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+.back:before,
+.back:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 7px;
+}
+
+.back:before {
+  border: 4px solid #f0eeef;
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.back:after {
+  border: 4px solid #96daf0;
+  transform: scale(1.3);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.back:hover:before,
+.back:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.back:hover:after,
+.back:focus:after {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.back-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.back-elem {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 17px 18px 0 18px;
+  transform: rotate(180deg);
+  fill: #f0eeef;
+}
+
+.back:hover .button-box,
+.back:focus .button-box {
+  transition: 0.4s;
+  transform: translateX(-56px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .back {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+
+  .create-account{
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: rgba(253,38,38, 0.685);
+    border: 2px solid rgba(253,38,38, 0.685);
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+  }
+  .create-account::before{
+    content: " ";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: rgba(253,38,38, 0.685);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+
+  .create-account:hover::before{
+    scale: 3;
+  }
+  .create-account:hover{
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(253, 38, 38, 0.685);
+  }
+  
+  .create-account:active{
+    scale: 1;
+  }
+
+  .signup-form {
+    max-width: 400px; /* Limit the width of the form */
+    margin: 0 auto; /* Center the form */
+    padding: 20px; /* Add padding for spacing */
+    background-color:none;
+    border-style: hidden;
+    border-radius: 10px; /* Rounded corners */
+    color: #fff; /* White text color */
+}
+
+.title {
+    font-size: 28px;
+    color: red;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.p {
+    font-size: 16px; /* Adjust paragraph font size */
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+label {
+    font-weight: bold;
+    color: red;
+    letter-spacing: 3px;
+    text-decoration-line: underline;
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: 1rem 0.5rem;
+  width: 20rem;
+  background-color: inherit;
+  color: rgb(223, 180, 180);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(184, 165, 165);
+  transition: all 400ms;
+}
+input:hover{
+  background-color:rgb(184, 165, 165) ;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+input:focus {
+    border-color:rgb(184, 165, 165); /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
